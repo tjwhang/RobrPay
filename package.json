@@ -1,0 +1,20 @@
+{
+  "name": "robrpay",
+  "version": "1.0.0",
+  "description": "로버페이, 간편하고, 빠르고, 오픈소스이며, (\"그들\"에게) 비밀스러운 페이먼트",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "djs-commander": "^0.0.50",
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.3",
+    "pretty-ms": "^8.0.0",
+    "punycode": "^2.3.1"
+  }
+}
