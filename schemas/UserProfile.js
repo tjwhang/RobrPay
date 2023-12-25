@@ -22,4 +22,4 @@ const userProfileSchema = new Schema({
     timestamps: true,
 });
 
-module.exports = model('userProfile', userProfileSchema);
+module.exports = model('UserProfile', userProfileSchema);

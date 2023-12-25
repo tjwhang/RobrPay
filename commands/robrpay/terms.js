@@ -8,9 +8,9 @@ module.exports = {
     run: ({ interaction }) => {
         interaction.reply({
             content:
-                `github.com/` 
+                `https://github.com/tjwhang/RobrPay/blob/main/TERMS.md` 
         });
     },
 
-    deleted: true
+    deleted: false
 }
