@@ -1,6 +1,6 @@
 # RobrPay
 
-로버페이, 간편하고, 빠르고, 오픈소스이며, ("그들"에게) 비밀스러운 페이먼트
+로버페이, 간편하고, 빠르고, 오픈소스이며, ("그들"에게) 비밀스러운 페이먼트!
 
 ![Robr Pay Logo](image/README/robrpay_logo_main.png "Robr Pay Logo")
 
