@@ -24,7 +24,7 @@ MONGODB_URI=mongodb uri
 ### 디스코드 봇 만들기
 
 디스코드 개발자 포털에서 디스코드 봇을 만들고 관리자 권한을 부여하세요. 이거 하는 방법은 인터넷에 많음.
-디스코드 봇 토큰을 복사하여 `discord bot token`을 지우고 .env `의 `TOKEN=` 뒤에 붙여넣으세요
+디스코드 봇 토큰을 복사하여 `discord bot token`을 지우고 `.env`의 `TOKEN=` 뒤에 붙여넣으세요
 
 ### Mongo DB 데이터베이스 구축
 
