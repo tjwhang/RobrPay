@@ -2,7 +2,7 @@
 
 로버페이, 간편하고, 빠르고, 오픈소스이며, ("그들"에게) 비밀스러운 페이먼트
 
-![1703510531286](image/README/robrpay_logo_main.png)
+![Robr Pay Logo](image/README/robrpay_logo_main.png "Robr Pay Logo")
 
 ## 사용법
 
@@ -19,6 +19,7 @@ node.js 를 설치하세요. 이 봇은 deprecated 된 punycode 기능을 사용
 ```properties
 TOKEN=discord bot token
 MONGODB_URI=mongodb uri
+OWNER_ID=대리결제를 해줄 친구의 디스코드 사용자 ID
 ```
 
 ### 디스코드 봇 만들기
@@ -35,4 +36,6 @@ MongoDB 데이터베이스 접속 비밀번호를 URI의 `<Password>`자리에 �
 
 ### 배치
 
-친구들끼리 있는 서버에 봇을 초대하고 루트 폴더에서 `node index.js` 를 실행해 봇을 구동하세요. 준비 완료!
+친구들끼리 있는 서버에 봇을 초대하고 루트 폴더에서 `node index.js` 를 실행해 봇을 구동하세요.
+
+참고로 회원가입 할 때와 `/terms` 명령어를 치면 나오는 약관은 저만의 (악독한) 약관이므로 다른 약관을 적용하고 싶다면 직접 작성하여 github나 pastebin 같은 곳에 업로드한 다음 `terms.js`와 `register.js`에 있는 URL을 수정해서 사용하세요. 그럼 준비 완료!
