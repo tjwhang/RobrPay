@@ -13,7 +13,7 @@ module.exports = {
     run: async ({ interaction }) => {
         try {
             let userProfile = await UserProfile.findOne({
-                userId: interaction.member.id,
+                userId: interaction.user.id,
             });
 
             await interaction.deferReply({ ephemeral: true });
@@ -46,7 +46,7 @@ module.exports = {
                 ephemeral: true,
             })
 
-            const filter = (i) => i.member.id === interaction.member.id;
+            const filter = (i) => i.user.id === interaction.user.id;
 
             const registerFormCollecter = registerForm.createMessageComponentCollector({
                 componentType: ComponentType.Button,
@@ -55,21 +55,22 @@ module.exports = {
             registerFormCollecter.on('collect', async (bi) => {
                 // await bi.deferReply({ ephemeral: true });
                 if (bi.customId === 'register-button') {
-                    userProfile = new UserProfile({
-                        userId: interaction.member.id,
-                    });
-                    userProfile.save();
+                    if (!userProfile) {
+                        userProfile = new UserProfile({
+                            userId: interaction.user.id,
+                        });
+                        userProfile.save();
+                    }             
 
                     interaction.editReply({
-                        content: `회원가입이 완료되었습니다. 환영합니다, ${interaction.member}님! `,
+                        content: `회원가입이 완료되었습니다. 환영합니다, ${interaction.user}님! `,
                     });
+                    interaction.user.send("Robr Pay 회원가입이 완료되었습니다. 이용해 주셔서 감사합니다. 앞으로 모든 사용 내역과 개인적인 내용들은 DM으로 전송됩니다. ");                    
                     registerButton.setLabel('회원가입 완료됨');
                     registerButton.setDisabled(true);
                     await bi.update({
                         components: [buttonRow]
                     })
-                    interaction.member.send("Robr Pay 회원가입이 완료되었습니다. 이용해 주셔서 감사합니다. 앞으로 모든 사용 내역과 개인적인 내용들은 DM으로 전송됩니다. ");
-
                     return registerButton;
                 }
                 return buttonRow;

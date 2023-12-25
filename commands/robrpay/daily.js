@@ -12,6 +12,7 @@ module.exports = {
         if (!interaction.inGuild()) {
             interaction.reply({
                 content: "서버에서만 사용할 수 있는 명령어입니다. ",
+                ephemeral: true,
             });
             return;
         }
@@ -52,7 +53,7 @@ module.exports = {
                 content: `${dailyAmount} Robr Points를 받았습니다. `,
                 ephemeral: true
             });
-            interaction.member.send(`입금 정보\n+${dailyAmount} Robr Points\n비고: 일일 보상`);
+            interaction.member.send(`입금 정보\n+${dailyAmount} Robr Points\n비고: 일일 보상\n누적 액수: ${userProfile.points} Robr Points`);
 
         } catch (error) {
             console.log(`오류: ${error}`);

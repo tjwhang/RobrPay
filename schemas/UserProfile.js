@@ -9,6 +9,14 @@ const userProfileSchema = new Schema({
         type: Number,
         default: 0,
     },
+    pendingCashAmount: {
+        type: Number,
+        default: 0,
+    },
+    pendingCashMethod: {
+        type: String,
+        default: null,
+    },
     points: {
         type: Number,
         default: 0,

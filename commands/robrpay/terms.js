@@ -8,7 +8,8 @@ module.exports = {
     run: ({ interaction }) => {
         interaction.reply({
             content:
-                `https://github.com/tjwhang/RobrPay/blob/main/TERMS.md` 
+                `https://github.com/tjwhang/RobrPay/blob/main/TERMS.md`,
+            ephemeral: true,
         });
     },
 
