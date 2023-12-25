@@ -46,6 +46,7 @@ module.exports = {
             }
 
             cooldown.endsAt = Date.now() + 300000;
+            interaction.editReply({conent: `${interaction.user.username} 님이 돈을 구걸합니다!`});
 
 
         } catch (error) {

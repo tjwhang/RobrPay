@@ -1,7 +1,7 @@
 module.exports = {
     data: {
         name: 'register',
-        description: 'Robr Pay 회원가입 절차를 밟습니다. ',
+        description: 'Robr Pay 회원가입 절차를 밟습니다. 회원 가입을 하면 약관에 동의하는 것으로 간주합니다. 약관은 /terms 명령어로 확인할 수 있습니다. ',
         options: []
     },
 
