@@ -48,11 +48,13 @@ module.exports = {
 
             const filter = (i) => i.user.id === interaction.user.id;
 
-            const registerFormCollecter = registerForm.createMessageComponentCollector({
+            const registerFormCollector = registerForm.createMessageComponentCollector({
+                filter,
                 componentType: ComponentType.Button,
+                time: 60_000,
             });
             
-            registerFormCollecter.on('collect', async (bi) => {
+            registerFormCollector.on('collect', async (bi) => {
                 // await bi.deferReply({ ephemeral: true });
                 if (bi.customId === 'register-button') {
                     if (!userProfile) {

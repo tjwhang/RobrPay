@@ -27,3 +27,4 @@ new CommandHandler({
     client.login(process.env.TOKEN);
 })();
 
+module.exports.client = client;
